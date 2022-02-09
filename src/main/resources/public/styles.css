@@ -1,0 +1,21 @@
+#container{
+    margin: auto;
+    width: 50%;
+    height: 150px;
+    border: 3px solid skyblue;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20%;
+    display: block;
+}
+
+.paramLabel{
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: Tahoma;
+}
+
+#answer{
+    font-size: 60px;
+
+}

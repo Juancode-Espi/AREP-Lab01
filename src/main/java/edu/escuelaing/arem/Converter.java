@@ -15,9 +15,10 @@ public class Converter {
         if( tipo.equals("Celsius")){
             return parseFahrenheit(n);
         }
-        else {
+        else if(tipo.equals("Fahrenheit")) {
             return parseCelsius(n);
         }
+        return 0;
     }
 
     private float parseFahrenheit(float numero) {

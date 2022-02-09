@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Fahren to Cels</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
 
 
 </head>
 <body>
-    <input type="text" id="tipo">
-    <input type="text" id="numero">
-    <button type="button" onclick="index.conect($('#tipo').val(),$('#numero').val())"> convertir </button>
+    <div id="container">
+        <div class="paramLabel">
+            <select class="bottomNav" id="unity">
+                <option value="Celsius">celsius to fahrenheit</option>
+                <option value="Fahrenheit">fahrenheit to celsius</option>
+            </select>
+            <input type="text" id="numero" placeholder="enter a number">
+            <button type="button" onclick="index.convert($('#numero').val())"> convert </button>
+        </div>
+            <span id="answer"></span>
+    </div>
 </body>
 </html>
