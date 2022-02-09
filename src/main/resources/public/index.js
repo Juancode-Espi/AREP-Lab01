@@ -9,12 +9,11 @@ const index = (function(){
         },
 
         getMethod : function(tipo,numero){
-            //'http://localhost:4567/Converter'+ tipo + '/' + numero;
-            var urlheroku = 'https://powerful-garden-62570.herokuapp.com/Converter/'+ tipo + '/' + numero;
+            var urlHeroku = 'https://powerful-garden-62570.herokuapp.com/Converter/'+ tipo + '/' + numero;
             var url = 'http://localhost:4567/Converter/'+ tipo + '/' + numero;
-            fetch(url)
+            fetch(urlHeroku)
                   .then(response => response.json())
-                  .then(data => $('#answer').html(data.respuesta))
+                  .then(data => $('#answer').html(data.answer))
 
 
         }

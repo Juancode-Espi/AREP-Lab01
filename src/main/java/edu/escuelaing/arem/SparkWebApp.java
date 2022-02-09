@@ -7,15 +7,15 @@ public class SparkWebApp {
     public static void main(String[] args) {
         port(getPort());
         staticFiles.location("/public");
-        get("/Converter/:tipo/:numero", (req, res) -> parse(req.params(":tipo"),req.params(":numero")));
+        get("/Converter/:type/:number", (req, res) -> parse(req.params(":type"),req.params(":number")));
     }
 
     public static JSONObject parse(String tipo, String numero){
-        Converter converter = new Converter(tipo);
+        ConverterService converter = new ConverterImpl(tipo);
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("tipo", converter.getTipo());
-        jsonObject.put("numero", numero);
-        jsonObject.put("respuesta", converter.parse(Float.parseFloat(numero)));
+        jsonObject.put("type", converter.getType());
+        jsonObject.put("number", numero);
+        jsonObject.put("answer", converter.parse(Float.parseFloat(numero)));
         return jsonObject;
     }
 

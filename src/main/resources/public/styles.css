@@ -1,12 +1,24 @@
+body {
+    background-image: url(BackGround/fondo.png);
+    background-attachment: fixed;
+    font-family: Times New Roman;
+
+}
+
+h1{
+    color: #E0E0E0;
+}
+
 #container{
     margin: auto;
     width: 50%;
     height: 150px;
-    border: 3px solid skyblue;
+
     padding: 10px;
     text-align: center;
     margin-top: 20%;
     display: block;
+    background-image: repeating-linear-gradient(-45deg, #7cd4cf, #7cd4cf 1.5px, #49c8c1 2px, #49c8c1 4px);
 }
 
 .paramLabel{
@@ -17,5 +29,14 @@
 
 #answer{
     font-size: 60px;
+    background-color: white;
+}
 
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
 }

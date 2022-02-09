@@ -14,7 +14,7 @@ const index = (function(){
             var url = 'http://localhost:4567/Converter/'+ tipo + '/' + numero;
             fetch(url)
                   .then(response => response.json())
-                  .then(data => $('#answer').html(data.respuesta))
+                  .then(data => $('#answer').html(data.answer))
 
 
         }
